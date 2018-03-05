@@ -19,8 +19,12 @@ public class Funcionario extends Pessoa {
         this.cargo = cargo;
         this.valorHora = valorHora;
         this.quantidadeHorasTrabalhada = quantidadeHorasTrabalhada;
+        this.salario = this.calculaSalario(quantidadeHorasTrabalhada, valorHora);
     }
 
+    public float calculaSalario(float qtdeHoras, float valorHoras){
+        return qtdeHoras * valorHoras;
+    }
     
     
     public float getSalario() {
